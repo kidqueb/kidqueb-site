@@ -1,5 +1,6 @@
 {
     "private": true,
+    "main": "resources/js/site.js",
     "scripts": {
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -13,6 +14,7 @@
         "cross-env": "^7.0.2",
         "laravel-mix": "^5.0.4",
         "postcss-import": "^12.0.1",
-        "tailwindcss": "^1.2.0"
+        "tailwindcss": "^1.2.0",
+        "vue-template-compiler": "^2.6.11"
     }
 }
