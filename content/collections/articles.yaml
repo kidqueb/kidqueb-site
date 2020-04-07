@@ -1,0 +1,16 @@
+title: Articles
+template: articles/show
+layout: layout
+blueprints:
+  - articles
+taxonomies:
+  - topics
+  - categories
+revisions: false
+route: '/articles/{{ slug }}'
+date: true
+sort_dir: asc
+default_status: draft
+date_behavior:
+  past: public
+  future: unlisted

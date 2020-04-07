@@ -2,3 +2,9 @@ name: Nick
 super: true
 id: cd4ea015-a792-46cb-a2b3-bdfdb086e840
 password_hash: $2y$10$a/lYc0RhGC9weV6Gf76HBuetUZvxHbwR9CfbYoJWB/IU9im1t3Lmy
+preferences:
+  taxonomies:
+    topics:
+      columns:
+        - title
+        - slug

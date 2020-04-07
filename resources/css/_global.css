@@ -1,0 +1,28 @@
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hr {
+  width: 100%;
+  display: flex;
+}
+.hr:before,
+.hr:after {
+  content: "";
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: #D8D8D8;
+}
+.hr:before { transform: translateX(-1.25rem); }
+.hr:after { transform: translateX(1.25rem); }
+
+.child\:opacity {
+  transition: opacity 200ms ease
+}
+.parent\:hover:hover .child\:opacity {
+  opacity: 1;
+}

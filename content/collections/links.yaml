@@ -1,0 +1,12 @@
+title: Links
+template: links/show
+layout: layout
+blueprints:
+  - links
+revisions: false
+route: '/links/{{ slug }}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
