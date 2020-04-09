@@ -14,26 +14,27 @@
 
 <section class="container text-white mt-20">
   <ul>
-    {{ collection from="articles|links" }}
+    {{ collection:posts }}
       {{ if index != 0 }}
         {{ partial:hr }}
       {{ /if }}
       <li>
         <a href="{{ url }}" class="parent:hover">
-          <p class="font-bold opacity-20 child:opacity">
+          <p class="font-bold opacity-20 child:opacity leading-none">
             {{ if collection == "articles" }}
               {{ number }}
             {{ else }}
               {{ svg src="external-link" }}
             {{ /if }}
           </p>
-          <h2 class="text-lg md:text-xl font-bold my-3">
+          <h2 class="text-lg md:text-xl lg:text-2xl font-bold mt-2">
             {{ title }}
           </h2>
-          <div class="font-mono italic leading opacity-75">
-            {{ description }}
+          <div class="font-mono italic leading opacity-75 my-3">
+            Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum.
           </div>
-          <div class="flex mt-10 font-mono text-sm uppercase leading-none tracking-widest">
+
+          <div class="flex mt-6 font-mono text-sm uppercase leading-none tracking-widest">
             <ul class="flex">
               {{ topics }}
               <li>
@@ -47,12 +48,12 @@
               {{ /topics }}
             </ul>
 
-            <p class="ml-auto">
+            <p class="ml-auto opacity-20">
               {{ date format="Y-m-d" }}
             </p>
           </div>
         </a>
       </li>
-    {{ /collection }}
+    {{ /collection:posts }}
   </ul>
 </section>

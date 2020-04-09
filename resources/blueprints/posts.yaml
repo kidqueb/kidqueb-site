@@ -1,0 +1,32 @@
+title: Posts
+sections:
+  article:
+    display: Article
+    fields:
+      -
+        handle: article_number
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Article Number'
+      -
+        handle: taxonomies
+        field:
+          mode: default
+          type: taxonomies
+          localizable: false
+          listable: hidden
+          display: Taxonomies
+  links:
+    display: Links
+    fields:
+      -
+        handle: link_url
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Link URL'

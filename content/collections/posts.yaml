@@ -1,16 +1,15 @@
-title: Articles
-template: articles/show
+title: Posts
+template: posts/show
 layout: layout
 blueprints:
-  - articles
+  - posts
+  - entry_link
 taxonomies:
-  - topics
   - categories
+  - topics
 revisions: false
-route: '/articles/{{ slug }}'
 date: true
 sort_dir: asc
-default_status: draft
 date_behavior:
   past: public
   future: unlisted
