@@ -1,7 +1,7 @@
 let mix = require('laravel-mix');
-let tailwindcss = require("tailwindcss");
-let postcssImport = require("postcss-import");
-
+let tailwindcss = require('tailwindcss');
+let postcssImport = require('postcss-import');
+let postcssNested = require('postcss-nested');
 
 /*
  |--------------------------------------------------------------------------
@@ -15,23 +15,23 @@ let postcssImport = require("postcss-import");
  */
 
 mix.webpackConfig({
-   watchOptions: {
-     ignored: /node_modules/
-   }
+	watchOptions: {
+		ignored: /node_modules/
+	}
 });
 
 mix
-   .js('resources/js/site.js', 'public/js')
-   .postCss("resources/css/site.css", "public/css")
-   .options({
-		postCss: [postcssImport(), tailwindcss()],
-      processCssUrls: false,
-      watchOptions: {
-         ignored: /node_modules/
-     }
+	.js('resources/js/site.js', 'public/js')
+	.js('resources/js/posts.js', 'public/js')
+	.postCss('resources/css/site.css', 'public/css')
+	.options({
+		postCss: [postcssImport(), tailwindcss(), postcssNested()],
+		processCssUrls: false,
+		watchOptions: {
+			ignored: /node_modules/
+		}
 	})
-   .sourceMaps();
-
+	.sourceMaps();
 
 /*
  |--------------------------------------------------------------------------

@@ -1,3 +1,84 @@
 .wysiwyg {
+	font-size: theme('fontSize.xl');
+	line-height: 1.75;
 
+	h2:not(:first-child) {
+		font-size: theme('fontSize.4xl');
+		margin-top: 2em;
+	}
+
+	h3:not(:first-child) {
+		font-size: theme('fontSize.2xl');
+		margin-top: 2em;
+	}
+
+	p:not(:first-child) {
+		margin-top: 1em;
+	}
+
+	ul {
+		display: block;
+		list-style-type: disc;
+		margin-top: 1em;
+		margin-bottom: 1 em;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 40px;
+	}
+
+	ol {
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+	}
+
+	li {
+		margin-top: 0.5em;
+	}
+}
+
+.lolight {
+  background: #1f1d1b;
+
+  &.language {
+    &-shell {
+      white-space: no-wrap;
+      span { color: #fff; }
+    }
+  }
+}
+.ll-nam {
+	/* words */
+	color: #fff;
+}
+.ll-num {
+	/* numbers */
+	color: #ec407a;
+}
+.ll-str {
+	/* strings */
+  color: #43a047;
+  white-space: nowrap;
+}
+.ll-rex {
+	/* regular expressions */
+	color: #ef6c00;
+}
+.ll-pct {
+	/* operators, punctation */
+	color: #666;
+}
+.ll-key {
+	/* keywords */
+	color: #555;
+	font-weight: bold;
+}
+.ll-com {
+	/* comments */
+	color: #aaa;
+	font-style: italic;
 }

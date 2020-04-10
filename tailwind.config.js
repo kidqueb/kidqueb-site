@@ -23,6 +23,9 @@ module.exports = {
           '900': '#2B2826'
         }
       },
+      minWidth: {
+        container: 600,
+      },
       maxWidth: {
         'logomark': '11.25rem',
         'wordmark': '16rem'
