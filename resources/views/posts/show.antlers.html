@@ -15,14 +15,7 @@
   {{ body }}
     {{ if type == "text" }}
       <div class="container wysiwyg">
-        {{ text }}
-      </div>
-    {{ elseif type == "code_block" }}
-      <div class="flex-1 min-w-container max-w-6xl">
-<pre class="overflow-auto lolight language-{{ language }} font-mono border-l border-yellow-900 rounded-sm px-5 py-4 -mx-5 my-6">
-{{ if language == "javascript" }}{{ javascript }}{{ /if }}
-{{ if language == "shell" }}{{ shell }}{{ /if }}
-</pre>
+        {{ text | noparse }}
       </div>
     {{ /if }}
   {{ /body }}

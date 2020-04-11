@@ -45,6 +45,10 @@ sections:
             - anchor
             - image
             - table
+            - underline
+            - strikethrough
+            - code
+            - codeblock
           save_html: false
           toolbar_mode: fixed
           link_noopener: false
@@ -139,3 +143,18 @@ sections:
           localizable: false
           listable: hidden
           display: 'Link URL'
+  markdown:
+    display: Markdown
+    fields:
+      -
+        handle: content
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: true
+          escape_markup: false
+          smartypants: true
+          type: markdown
+          localizable: false
+          listable: hidden
+          display: Content

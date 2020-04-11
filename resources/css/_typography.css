@@ -39,46 +39,15 @@
 	li {
 		margin-top: 0.5em;
 	}
-}
 
-.lolight {
-  background: #1f1d1b;
+	code {
+		@apply font-mono text-sm;
+	}
 
-  &.language {
-    &-shell {
-      white-space: no-wrap;
-      span { color: #fff; }
-    }
-  }
-}
-.ll-nam {
-	/* words */
-	color: #fff;
-}
-.ll-num {
-	/* numbers */
-	color: #ec407a;
-}
-.ll-str {
-	/* strings */
-  color: #43a047;
-  white-space: nowrap;
-}
-.ll-rex {
-	/* regular expressions */
-	color: #ef6c00;
-}
-.ll-pct {
-	/* operators, punctation */
-	color: #666;
-}
-.ll-key {
-	/* keywords */
-	color: #555;
-	font-weight: bold;
-}
-.ll-com {
-	/* comments */
-	color: #aaa;
-	font-style: italic;
+	pre {
+		@apply flex-1 min-w-container max-w-6xl border-l border-yellow-900 bg-gray-900 overflow-auto -mx-5 my-6 px-5 pt-2 pb-3 rounded-sm;
+		code {
+			@apply pr-5;
+		}
+	}
 }
