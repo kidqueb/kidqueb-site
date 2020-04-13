@@ -33,6 +33,7 @@ if (mix.inProduction()) {
 			path.join(__dirname, 'resources/js/**/*.js'),
 		],
 		whitelistPatterns: [/wysiwyg$/],
+		whitelistPatternsChildren: [/wysiwyg$/]
 	});
 }
 
