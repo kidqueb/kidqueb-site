@@ -4,22 +4,41 @@
 
 	h2:not(:first-child) {
 		font-size: theme('fontSize.4xl');
-		margin-top: 2em;
+		margin-top: 3rem;
+		margin-bottom: 1.5rem;
+		font-weight: bold;
 	}
 
 	h3:not(:first-child) {
 		font-size: theme('fontSize.2xl');
-		margin-top: 2em;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		font-weight: bold;
 	}
 
-	p:not(:first-child) {
-		margin-top: 1em;
+	h4 {
+		font-weight: bold;
+		margin-top: 1.5rem;
+	}
+
+	a {
+		color: #F8E9B9;
+		text-decoration: underline;
+
+		&:hover {
+			color: #E6D4A0;
+			text-decoration: line-through;
+		}
+	}
+
+	p {
+		margin-bottom: 1em;
 	}
 
 	ul {
 		display: block;
 		list-style-type: disc;
-		margin-top: 1em;
+		margin-bottom: 1em;
 		margin-bottom: 1 em;
 		margin-left: 0;
 		margin-right: 0;
@@ -29,7 +48,7 @@
 	ol {
     display: block;
     list-style-type: decimal;
-    margin-top: 1em;
+    margin-bottom: 1em;
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
@@ -37,17 +56,20 @@
 	}
 
 	li {
-		margin-top: 0.5em;
+		margin-bottom: 0.5rem;
+
+		:first-child { margin: 0; }
 	}
 
 	code {
-		@apply font-mono text-sm;
+		@apply font-mono bg-gray-900 rounded-sm;
 	}
 
 	pre {
-		@apply flex-1 min-w-container max-w-6xl border-l border-yellow-900 bg-gray-900 overflow-auto -mx-5 my-6 px-5 pt-2 pb-3 rounded-sm;
+		@apply flex-1 min-w-container max-w-6xl border-l border-yellow-900 bg-gray-900 overflow-auto
+			-mx-5 my-6 px-5 pt-2 pb-3 rounded-sm;
 		code {
-			@apply pr-5;
+			@apply pr-5 bg-transparent text-base;
 		}
 	}
 }

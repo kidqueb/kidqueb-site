@@ -3,6 +3,8 @@ let tailwindcss = require('tailwindcss');
 let postcssImport = require('postcss-import');
 let postcssNested = require('postcss-nested');
 
+require('laravel-mix-purgecss');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -19,6 +21,19 @@ mix.webpackConfig({
 		ignored: /node_modules/
 	}
 });
+
+if (mix.inProduction()) {
+	mix.purgeCss({
+		enabled: true,
+		extensions: ['html', 'js', 'php', 'vue', 'svg'],
+		globs: [
+			path.join(__dirname, 'resources/views/*.html'),
+			path.join(__dirname, 'resources/views/**/*.html'),
+			path.join(__dirname, 'resources/js/*.js'),
+			path.join(__dirname, 'resources/js/**/*.js'),
+		],
+	});
+}
 
 mix
 	.js('resources/js/site.js', 'public/js')

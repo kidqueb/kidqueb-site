@@ -21,9 +21,9 @@
       <li>
         <a href="{{ url }}" class="parent:hover">
           <p class="font-bold opacity-20 child:opacity leading-none">
-            {{ if collection == "articles" }}
-              {{ number }}
-            {{ else }}
+            {{ if blueprint == "article" }}
+              {{ article_number }}
+            {{ elseif blueprint == "link" }}
               {{ svg src="external-link" }}
             {{ /if }}
           </p>
@@ -31,7 +31,7 @@
             {{ title }}
           </h2>
           <div class="font-mono italic leading opacity-75 my-3">
-            Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum.
+            {{ description }}
           </div>
 
           <div class="flex mt-6 font-mono text-sm uppercase leading-none tracking-widest">

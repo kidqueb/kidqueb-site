@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ title ?? site_name }}</title>
     <link rel="stylesheet" href="{{ mix src='/css/site.css' }}" />
-	  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=Red+Hat+Text:wght@400;700&display=swap" rel="stylesheet">
 	</head>
-	<body class="font-sans bg-black text-white">
+	<body class="font-sans bg-black text-white text-lg">
 		<header class="header h-40 flex items-center relative">
 			<a href="/">
 				{{ if url == "/" }}
@@ -18,7 +18,7 @@
 				{{ /if }}
 			</a>
 
-			<form class="flex max-w-sm mx-auto absolute" style="left: 50%; transform: translateX(-50%)">
+			{{# <form class="flex max-w-sm mx-auto absolute" style="left: 50%; transform: translateX(-50%)">
 				<label for="search" aria-label="Search" class="absolute flex h-full w-10 items-center justify-center">
 					{{ svg src="search" }}
 				</label>
@@ -28,7 +28,7 @@
 					placeholder="Search"
 					class="w-full h-10 rounded focus:outline-none border border-gray-900 focus:border-gray-500 bg-gray-900 focus:bg-gray-900 pl-10 placeholder-gray-500"
 				/>
-			</form>
+			</form> #}}
 
 			<ul class="flex ml-auto">
 				<li>

@@ -1,0 +1,88 @@
+title: Links
+sections:
+  base:
+    display: Base
+    fields:
+      -
+        handle: article_number
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Article Number'
+      -
+        handle: description
+        field:
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          type: bard
+          localizable: false
+          listable: hidden
+          display: Description
+      -
+        handle: body
+        field:
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - underline
+            - strikethrough
+            - code
+            - codeblock
+            - h4
+          save_html: false
+          toolbar_mode: floating
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: true
+          fullscreen: true
+          allow_source: true
+          type: bard
+          localizable: false
+          listable: hidden
+          display: Body
+          sets:
+            image:
+              display: Image
+              fields:
+                -
+                  handle: file
+                  field:
+                    container: assets
+                    mode: grid
+                    restrict: false
+                    allow_uploads: true
+                    max_files: 1
+                    type: assets
+                    localizable: false
+                    listable: hidden
+                    display: File

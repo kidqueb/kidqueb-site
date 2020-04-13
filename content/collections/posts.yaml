@@ -2,8 +2,8 @@ title: Posts
 template: posts/show
 layout: layout
 blueprints:
-  - posts
-  - entry_link
+  - article
+  - link
 taxonomies:
   - categories
   - topics
