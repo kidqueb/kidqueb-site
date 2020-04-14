@@ -59,7 +59,7 @@ sections:
             - codeblock
             - h4
           save_html: false
-          toolbar_mode: floating
+          toolbar_mode: fixed
           link_noopener: false
           link_noreferrer: false
           target_blank: false
